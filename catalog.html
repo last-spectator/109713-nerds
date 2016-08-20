@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Макеты — Магазин/Нёрдс</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="index-logo">
+          <img src="img/index-logo.png" width="70" height="30" alt="Главная">
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Студия</a>
+            </li>
+            <li>
+              <a href="#">Клиенты</a>
+            </li>
+            <li>
+              <a href="catalog.html">Магазин</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cart">
+          <a href="#" class="login">Корзина</a>
+        </div>
+      </div>
+    </header>
+
+
+    <main>
+      <div class="welcome-block">
+        <div class="container">
+          <h1 class="welcom-title">Добро пожаловать в магазин готовых макетов</h1>
+        </div>
+      </div>
+
+      <div class="filter">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <h2 class="filter-name">Сетка:</h2>
+          <ul class="radiobutton-list">
+            <li>
+              <input typ id="adaptive-field" type="radio" name="grid" value="adaptive">
+              <label for="adaptive-field">Адаптивная</label>
+            </li>
+            <li>
+              <input typ id="fixed-field" type="radio" name="grid" value="fixed">
+              <label for="fixed-field">Фиксированная</label>
+            </li>
+            <li>
+              <input typ id="rubber-field" type="radio" name="grid" value="rubber">
+              <label for="rubber-field">Резиновая</label>
+            </li>
+          </ul>
+          <h2 class="filter-name">Особенности:</h2>
+          <ul class="checkbox-list">
+            <li>
+              <input id="slider-field" type="checkbox" name="slider">
+              <label for="slider-field">Слайдер</label>
+            </li>
+            <li>
+              <input id="feature-block-field" type="checkbox" name="feature">
+              <label for="feature-block-field">Блок преимуществ</label>
+            </li>
+            <li>
+              <input id="news-field" type="checkbox" name="news">
+              <label for="news-field">Новости</label>
+            </li>
+            <li>
+              <input id="gallery-field" type="checkbox" name="gallery">
+              <label for="gallery-field">Галерея</label>
+            </li>
+            <li>
+              <input id="cart-field" type="checkbox" name="cart">
+              <label for="cart-field">Корзина</label>
+            </li>
+          </ul>
+          <button class="btn" type="submit" value="show">Показать</button>
+        </form>
+      </div>
+
+      <div class="goods">
+        <div class="doods-filter">
+          <h3 class="filter-title">Сортировать:</h3>
+          <div class="filter-list">
+            <li>По цене</li>
+            <li>По типу</li>
+            <li>По функционалу</li>
+          </div>
+          <div class="filter-indicators">
+            <div class="indicator-low"></div>
+            <div class="indicator-high"></div>
+          </div>
+        </div>
+        <div class="goods-item">
+          <div class="item-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="img/goods-item-1.jpg" width="170" height="200" alt="">
+        </div>
+        <div class="goods-item">
+          <div class="item-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="img/goods-item-2.jpg" width="170" height="200" alt="">
+          <div class="item-info">
+            <h3>Sunset</h3>
+            <p>Интернет-магазин с личным кабинетом</p>
+            <a href="#">10000 р.</a>
+          </div>
+        </div>
+        <div class="goods-item">
+          <div class="item-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="img/goods-item-3.jpg" width="170" height="200" alt="">
+        </div>
+        <div class="goods-item">
+          <div class="item-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="img/goods-item-4.jpg" width="170" height="200" alt="">
+        </div>
+        <div class="goods-item">
+          <div class="item-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="img/goods-item-5.jpg" width="170" height="200" alt="">
+        </div>
+        <div class="goods-item">
+          <div class="item-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="img/goods-item-6.jpg" width="170" height="200" alt="">
+        </div>
+
+        <ul class="goods-pagination">
+          <li>
+            <span>1</span>
+          </li>
+          <li>
+            <a class="btn-pagination" href="#">2</a>
+          </li>
+          <li>
+            <a class="btn-pagination" href="#">3</a>
+          </li>
+          <li>
+            <a class="btn" href="#">Следующая</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="address">
+        <div class="container">
+          <div class="address-block">
+            <h3>NЁRDS DESIGN STUDIO</h3>
+            <div class="text">
+              <p>191186, Санкт-Петербург,<br>
+                ул. Б. Конюшенная, д. 19/8</p>
+              <span>тел. +7 (812) 275-75-75</span>
+            </div>
+            <a class="btn" href="#">Напишите нам</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <footer class="container">
+      <div class="social-block">
+        <a href="social-btn social-btn-vk"></a>
+        <a href="social-btn social-btn-fb"></a>
+        <a href="social-btn social-btn-inst"></a>
+      </div>
+      <div class="slogan">
+        <h3>Давайте дружить, это выгодно!</h3>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </footer>
+  </body>
+</html>
