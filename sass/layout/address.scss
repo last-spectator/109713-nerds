@@ -1,0 +1,59 @@
+.address {
+  position: relative;
+  width: 100%;
+  height: 420px;
+
+  &__inner {
+    position: absolute;
+    width: 880px;
+    height: 0;
+    padding: 0 10px;
+    margin-left: -450px;
+    left: 50%;
+    z-index: 1000;
+  }
+
+  &__contacts {
+    width: 205px;
+    padding: 25px 25px 25px 20px;
+    margin-top: 90px;
+    background: $white;
+    box-shadow: -8px 8px 20px 0 $color-4;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    color: $opacity-gray;
+    margin: 0 0 30px 0;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 30px;
+    color: $black;
+    margin: 0 0 25px 0;
+  }
+
+  &__content {
+    margin: 0 0 25px 0;
+  }
+
+  &__btn {
+    display: block;
+    width: 200px;
+    padding: 12px 0;
+    margin: 0 0 0 5px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: $light-red;
+    border-radius: 3px;
+      &:hover {
+        background: $normal-red;
+      }
+  }
+}

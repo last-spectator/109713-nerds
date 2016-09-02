@@ -1,0 +1,120 @@
+.modalWindow {
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: 240px;
+  margin-left: -315px;
+  width: 630px;
+  height: 416px;
+  background: $white;
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+  z-index: 2000;
+
+  &__close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: url("../img/sprite/icon-close.png") no-repeat;
+    width: 41px;
+    height: 41px;
+    cursor: pointer;
+  }
+
+  &__form {
+    @include clearfix;
+    width: 460px;
+    margin: 55px auto 0 auto;
+  }
+
+  &__signature {
+    font-size: 16px;
+    line-height: 18px;
+    width: 220px;
+    margin: 0 0 23px 0;
+  }
+
+  &__signature:last-child {
+    margin: 0;
+  }
+
+  .modalWindow__signature-name {
+    float: left;
+  }
+
+  .modalWindow__signature_mail {
+    float: right;
+  }
+
+  &__data {
+    width: 201px;
+    border: 2px solid #d7dcde;
+    padding: 7.5px;
+    margin: 12px 0 0 0;
+    text-transform: uppercase;
+    &:hover {
+      border: 2px solid #a2a9ac;
+    }
+    &:focus {
+      border: 2px solid #56bffb;
+      outline: none;
+    }
+  }
+
+  &__data::-webkit-input-placeholder {
+    color: $black;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &__data-text {
+    width: 426px;
+    height: 86px;
+    border: 2px solid #d7dcde;
+    padding: 12px 15px;
+    margin: 12px 0 40px 0;
+    text-transform: uppercase;
+    resize: none;
+    &:hover {
+      border: 2px solid #a2a9ac;
+    }
+    &:focus {
+      border: 2px solid #56bffb;
+      outline: none;
+    }
+  }
+
+  &__data-text::-webkit-input-placeholder {
+    color: $black;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    outline: none;
+  }
+
+  &__btn {
+    font-size: 12px;
+    line-height: 18px;
+    color: $white;
+    text-transform: uppercase;
+    background: $light-red;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    width: 460px;
+    border-radius: 3px;
+  }
+}
+
+.modalWindow-show {
+  display: block;
+  animation-name: flipInX;
+  animation-duration: .75s;
+}
+
+.modalWindow-error {
+  animation-name: rubberBand;
+  animation-duration: .75s;
+}

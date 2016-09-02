@@ -1,0 +1,20 @@
+{
+  "name": "nerds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-spritesmith": "0.0.2"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss css/main.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

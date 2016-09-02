@@ -1,0 +1,93 @@
+.features {
+  width: 880px;
+  margin: 0 auto 60px auto;
+  padding: 0 10px 80px 10px;
+  border-bottom: 2px solid $gray;
+  @include clearfix;
+
+  &__item {
+    float: left;
+    width: 240px;
+    margin-right: 80px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+
+  &__promo {
+    font-size: 15px;
+    line-height: 22px;
+    color: $light-black;
+    margin: 0;
+  }
+
+  &__btn-red {
+    display: block;
+    width: 140px;
+    padding: 10px 0;
+    margin-top: 26px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: $light-red;
+    border-radius: 3px;
+      &:hover {
+        background: $normal-red;
+      }
+      &:active {
+        background: $height-red;
+      }
+  }
+
+  &__btn-green {
+    display: block;
+    width: 140px;
+    padding: 10px 0;
+    margin-top: 26px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: $light-green;
+    border-radius: 3px;
+      &:hover {
+        background: $normal-green;
+      }
+      &:active {
+        background: $height-green;
+      }
+  }
+
+  &__btn-yellow {
+    display: block;
+    width: 140px;
+    padding: 10px 0;
+    margin-top: 26px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: $light-yellow;
+    border-radius: 3px;
+      &:hover {
+        background: $normal-yellow;
+      }
+      &:active {
+        background: $height-yellow;
+      }
+  }
+}
