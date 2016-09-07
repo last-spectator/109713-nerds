@@ -1,230 +1,268 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Магазин</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <header class="header">
-    <div class="header__inner">
-      <a href="#" class="header__logo"><img src="img/logo.png" width="139" height="56" alt="Nerds"></a>
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li class="header__item"><a href="index.html" class="header__link">Студия</a></li>
-          <li class="header__item"><a href="#" class="header__link">Клиенты</a></li>
-          <li class="header__item"><a href="#" class="header__link--active">Магазин</a></li>
-          <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
-        </ul>
-      </nav>
-      <a href="#" class="header__basket">Корзина</a>
+  <head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main-min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container clearfix">
+        <a class="header-logo" href="index.html">
+          <img src="img/logo.png" width="139" height="56" alt="Nerds">
+        </a>
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li class="header-item">
+              <a class="header-link" href="index.html">Студия</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#">Клиенты</a>
+            </li>
+            <li class="header-item">
+              <span class="header-link link-active">Магазин</span>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header-basket" href="#">Корзина</a>
+      </div>
+      <div class="banner">
+        <div class="banner-container">
+          <h1 class="banner-title">Добро пожаловать в магазин готовых макетов</h1>
+        </div>
+      </div>
+    </header>
+    <main class="content clearfix">
+      <div class="column-left">
+        <form class="content-form">
+          <h2 class="form-title">Стоимость:</h2>
+          <div class="form-filter">
+            <div class="form-control">
+              <div class="form-scale">
+                <div class="form-bar"></div>
+              </div>
+                <div class="form-controller controller-min"></div>
+                <div class="form-controller controller-max"></div>
+              </div>
+              <div class="form-price">
+                <label class="form-signature">ОТ
+                  <input name="min-price" type="text" value="0">
+                </label>
+                <label class="form-signature">ДО
+                  <input name="max-price" type="text" value="15000">
+                </label>
+              </div>
+            </div>
+            <div class="radio-box">
+              <h2 class="radio-title">Сетка:</h2>
+              <ul class="radio-list">
+                <li class="radio-element">
+                  <input id="radio-1" type="radio" name="grid" checked>
+                  <label for="radio-1">Адаптивная</label>
+                </li>
+                <li class="radio-element">
+                  <input id="radio-2" type="radio" name="grid">
+                  <label for="radio-2">Фиксированная</label>
+                </li>
+                <li class="radio-element">
+                  <input id="radio-3" type="radio" name="grid">
+                  <label for="radio-3">Резиновая</label>
+                </li>
+              </ul>
+            </div>
+            <div class="checkbox">
+              <h2 class="checkbox-title">Особенности:</h2>
+              <ul class="checkbox-list">
+                <li class="checkbox-element">
+                  <input id="checkbox-1" type="checkbox" name="slider" checked>
+                  <label for="checkbox-1">Слайдер</label>
+                </li>
+                <li class="checkbox-element">
+                  <input id="checkbox-2" type="checkbox" name="benefits unit">
+                  <label for="checkbox-2">Блок преимуществ</label>
+                </li>
+                <li class="checkbox-element">
+                  <input id="checkbox-3" type="checkbox" name="news" checked>
+                  <label for="checkbox-3">Новости</label>
+                </li>
+                <li class="checkbox-element">
+                  <input id="checkbox-4" type="checkbox" name="gallery">
+                  <label for="checkbox-4">Галерея</label>
+                </li>
+                <li class="checkbox-element">
+                  <input id="checkbox-5" type="checkbox" name="basket">
+                  <label for="checkbox-5">Корзина</label>
+                </li>
+              </ul>
+            </div>
+            <a class="form-btn" href="#">Показать</a>
+        </form>
+      </div>
+      <div class="column-right">
+        <div class="sort-block clearfix">
+          <ul class="sort-list">
+            <li class="sort-item">
+              <span class="sort-title">Сортировать:</span>
+            </li>
+            <li class="sort-item">
+              <a href="#" class="sort-link">по цене</a>
+            </li>
+            <li class="sort-item">
+              <a href="#" class="sort-link">по типу</a>
+            </li>
+            <li class="sort-item">
+              <a href="#" class="sort-link">по функционалу</a>
+            </li>
+          </ul>
+          <div class="sort-indicator"></div>
+        </div>
+        <div class="goods clearfix">
+          <div class="goods-item">
+            <div class="goods-head"></div>
+            <img src="img/catalog-items/item-1.jpg" width="240" height="240" alt="Товар">
+            <div class="content-product">
+              <div class="product-text">
+                <a class="product-title" href="#">Aviator</a>
+                <p class="product-description">Одностраничный макет с авторским дизайном</p>
+              </div>
+              <a class="product-btn" href="#">8000 Р.</a>
+            </div>
+          </div>
+          <div class="goods-item">
+            <div class="goods-head">
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+            </div>
+            <img src="img/catalog-items/item-2.jpg" width="240" height="240" alt="Товар">
+            <div class="content-product">
+              <div class="product-text">
+                <a class="product-title" href="#">Sunset</a>
+                <p class="product-description">Интернет-магазин<br> с личным кабинетом</p>
+              </div>
+              <a class="product-btn" href="#">10000 Р.</a>
+            </div>
+          </div>
+          <div class="goods-item">
+            <div class="goods-head">
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+            </div>
+            <img src="img/catalog-items/item-3.jpg" width="240" height="240" alt="Товар">
+            <div class="content-product">
+              <div class="product-text">
+                <a class="product-title" href="#">Forte</a>
+                <p class="product-description">Отличный макет<br> для личного блога</p>
+              </div>
+              <a class="product-btn" href="#">5000 Р.</a>
+            </div>
+          </div>
+          <div class="goods-item">
+            <div class="goods-head">
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+            </div>
+            <img src="img/catalog-items/item-4.jpg" width="240" height="240" alt="Товар">
+            <div class="content-product">
+              <div class="product-text">
+                <a class="product-title" href="#">Modern Organic THAI</a>
+                <p class="product-description">Сайт для ресторана быстрого питания</p>
+              </div>
+              <a class="product-btn" href="#">12000 Р.</a>
+            </div>
+          </div>
+          <div class="goods-item">
+            <div class="goods-head">
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+            </div>
+            <img src="img/catalog-items/item-5.jpg" width="240" height="240" alt="Товар">
+            <div class="content-product">
+              <div class="product-text">
+                <a class="product-title" href="#">Avenue</a>
+                <p class="product-description">Макет для блога<br> о путешествиях</p>
+              </div>
+              <a class="product-btn" href="#">8000 Р.</a>
+            </div>
+          </div>
+          <div class="goods-item">
+            <div class="goods-head">
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+              <i class="goods-circle"></i>
+            </div>
+            <img src="img/catalog-items/item-6.jpg" width="240" height="240" alt="Товар">
+            <div class="content-product">
+              <div class="product-text">
+                <a class="product-title" href="#">Dovetail</a>
+                <p class="product-description">Интернет-магазин<br> с галереей товаров</p>
+              </div>
+              <a class="product-btn" href="#">14000 Р.</a>
+            </div>
+          </div>
+        </div>
+        <nav class="pagination clearfix">
+          <ul class="pagination-list">
+            <li class="pagination-item">
+              <a class="pagination-link link-active" href="#">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+          </ul>
+          <button class="pagination-btn" name="Next">Следующая</button>
+        </nav>
+      </div>
+    </main>
+    <div id="map" class="address">
+      <div class="address-contanier">
+        <div class="address-contacts">
+          <div class="address-text">
+            <h4 class="address-title">NЁRDS DESIGN STUDIO</h4>
+            <p class="address-content">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <div class="address__phone">тел. +7 (812) 275-75-75</div>
+          </div>
+          <a class="address-btn" href="#">Напишите нам</a>
+        </div>
+      </div>
     </div>
-  </header>
-
-
-
-  <div class="banner">
-    <div class="banner__inner">
-      <h1 class="banner__title">Добро пожаловать в магазин<br> готовых макетов</h1>
-    </div>
-  </div>
-
-
-
-  <main class="content">
-    <div class="content__column-left">
-      <form class="content__form">
-        <h2 class="content__form-title">Стоимость:</h2>
-        <div class="content__form-filter">
-          <div class="content__form-control">
-            <div class="content__form-scale">
-              <div class="content__form-bar"></div>
-            </div>
-              <div class="content__form-controller content__form-controller-min"></div>
-              <div class="content__form-controller content__form-controller-max"></div>
-            </div>
-            <div class="content__form-price">
-              <label class="content__form-signature">от<input name="min-price" type="text" value="0"></label>
-              <label class="content__form-signature">до<input name="max-price" type="text" value="15000"></label>
-            </div>
-          </div>
-
-          <div class="content__radio-box">
-            <h2 class="content__radio-title">Сетка:</h2>
-            <ul class="content__radio-list">
-              <li class="content__radio-element">
-                <input id="radio-1" type="radio" name="grid" checked>
-                <label for="radio-1">Адаптивная</label>
-              </li>
-              <li class="content__radio-element">
-                <input id="radio-2" type="radio" name="grid">
-                <label for="radio-2">Фиксированная</label>
-              </li>
-              <li class="content__radio-element">
-                <input id="radio-3" type="radio" name="grid">
-                <label for="radio-3">Резиновая</label>
-              </li>
-            </ul>
-          </div>
-
-          <div class="content__checkbox">
-            <h2 class="content__checkbox-title">Особенности:</h2>
-            <ul class="content__checkbox-list">
-              <li class="content__checkbox-element">
-                <input id="checkbox-1" type="checkbox" name="slider" checked>
-                <label for="checkbox-1">Слайдер</label></li>
-              <li class="content__checkbox-element">
-                <input id="checkbox-2" type="checkbox" name="benefits unit">
-                <label for="checkbox-2">Блок преимуществ</label></li>
-              <li class="content__checkbox-element">
-                <input id="checkbox-3" type="checkbox" name="news" checked>
-                <label for="checkbox-3">Новости</label></li>
-              <li class="content__checkbox-element">
-                <input id="checkbox-4" type="checkbox" name="gallery">
-                <label for="checkbox-4">Галерея</label></li>
-              <li class="content__checkbox-element">
-                <input id="checkbox-5" type="checkbox" name="basket">
-                <label for="checkbox-5">Корзина</label></li>
-            </ul>
-          </div>
-
-          <a href="#" class="content__btn">Показать</a>
+    <footer class="footer clearfix">
+      <div class="footer-social">
+        <a class="footer-vk" href="#"></a>
+        <a class="footer-fb" href="#"></a>
+        <a class="footer-inst" href="#"></a>
+      </div>
+      <div class="footer-text">
+        <h3 class="footer-title">Давайте дружить, это выгодно!</h3>
+        <p class="footer-promo">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal-close"></div>
+      <form class="modal-form clearfix" action="/echo" method="post">
+        <label class="modal-signature signature-name">Ваше имя:
+        <input id="you-name" class="modal-data" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+        </label>
+        <label class="modal-signature signature_mail">Ваш e-mail:
+        <input id="you-mail" class="modal-data" type="text" name="e-mail" placeholder="Для отправки ответа">
+        </label>
+        <label class="modal-signature" for="text">Текст письма:</label>
+        <textarea id="text" class="data-text" name="content" placeholder="В свободной форме"></textarea>
+        <button class="modal-btn" type="submit">Отправить</button>
       </form>
     </div>
-
-
-    <div class="content__column-right">
-      <div class="content__sort-block">
-        <ul class="content__sort-list">
-          <span class="content__sort-title">Сортировать:</span>
-          <li class="content__sort-item"><a href="#" class="content__sort-link">по цене</a></li>
-          <li class="content__sort-item"><a href="#" class="content__sort-link">по типу</a></li>
-          <li class="content__sort-item"><a href="#" class="content__sort-link">по функционалу</a></li>
-        </ul>
-        <div class="content__sort-indicator"></div>
-      </div>
-
-      <div class="content__goods">
-        <article class="content__goods-item">
-          <div class="content__goods-head">
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-          </div>
-          <img src="img/catalog-items/item-1.jpg" width="240" height="240" alt="Товар">
-        </article>
-        <article class="content__goods-item">
-          <div class="content__goods-head">
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-          </div>
-          <img src="img/catalog-items/item-2.jpg" width="240" height="240" alt="Товар">
-          <div class="content__product">
-            <div class="content__product-text">
-            <span class="content__product-title">Sunset</span>
-            <p class="content__product-description">Интернет-магазин<br> с личным кабинетом</p>
-            </div>
-            <a href="#" class="content__product-btn">10000 Р.</a>
-          </div>
-        </article>
-        <article class="content__goods-item">
-          <div class="content__goods-head">
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-          </div>
-          <img src="img/catalog-items/item-3.jpg" width="240" height="240" alt="Товар">
-        </article>
-        <article class="content__goods-item">
-          <div class="content__goods-head">
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-          </div>
-          <img src="img/catalog-items/item-4.jpg" width="240" height="240" alt="Товар">
-        </article>
-        <article class="content__goods-item">
-          <div class="content__goods-head">
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-          </div>
-          <img src="img/catalog-items/item-5.jpg" width="240" height="240" alt="Товар">
-        </article>
-        <article class="content__goods-item">
-          <div class="content__goods-head">
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-            <i class="content__goods-circle"></i>
-          </div>
-          <img src="img/catalog-items/item-6.jpg" width="240" height="240" alt="Товар">
-        </article>
-      </div>
-
-      <nav class="content__pagination">
-        <ul class="content__pagination-list">
-          <li class="content__pagination-item"><a href="#" class="content__pagination-link--active">1</a></li>
-          <li class="content__pagination-item"><a href="#" class="content__pagination-link">2</a></li>
-          <li class="content__pagination-item"><a href="#" class="content__pagination-link">3</a></li>
-        </ul>
-        <button class="content__pagination-btn" name="Next">Следущая</button>
-      </nav>
-    </div>
-  </main>
-
-
-
-  <div id="map" class="address">
-    <div class="address__inner">
-      <div class="address__contacts">
-        <div class="address__text">
-          <h4 class="address__title">NЁRDS DESIGN STUDIO</h4>
-          <p class="address__content">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <span>тел. +7 (812) 275-75-75</span>
-        </div>
-        <a href="#" class="address__btn">Напишите нам</a>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="footer">
-    <div class="footer__social">
-      <a href="#" class="footer__vk"></a>
-      <a href="#" class="footer__fb"></a>
-      <a href="#" class="footer__inst"></a>
-    </div>
-    <div class="footer__text">
-      <h3 class="footer__title">Давайте дружить, это выгодно!</h3>
-      <p class="footer__promo">Скидка 10% для друзей из социальных сетей.</p>
-    </div>
-  </div>
-
-
-
-  <div class="modalWindow">
-    <div class="modalWindow__close"></div>
-    <form class="modalWindow__form" action="/echo" method="post">
-      <label class="modalWindow__signature modalWindow__signature-name">Ваше имя:
-      <input id="you-name" class="modalWindow__data" type="text" name="name" placeholder="Представьтесь, пожалуйста">
-      </label>
-      <label class="modalWindow__signature modalWindow__signature_mail">Ваш e-mail:
-      <input id="you-mail" class="modalWindow__data" type="text" name="e-mail" placeholder="Для отправки ответа">
-      </label>
-      <label class="modalWindow__signature" for="text">Текст письма:</label>
-      <textarea id="text" class="modalWindow__data-text" class="modalWindow__message" name="content" placeholder="В свободной форме"></textarea>
-      <button class="modalWindow__btn" type="submit">Отправить</button>
-    </form>
-  </div>
-
-
-
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
-  <script src="js/map.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/map-min.js"></script>
+    <script src="js/main-min.js"></script>
+  </body>
 </html>

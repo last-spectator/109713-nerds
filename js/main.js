@@ -1,14 +1,14 @@
-var link = document.querySelector(".address__btn");
-var popup = document.querySelector(".modalWindow");
-var close = popup.querySelector(".modalWindow__close");
-var form = popup.querySelector(".modalWindow__form");
+var link = document.querySelector(".address-btn");
+var popup = document.querySelector(".modal");
+var close = popup.querySelector(".modal-close");
+var form = popup.querySelector(".modal-form");
 var login = popup.querySelector("[id=you-name]");
 var password = popup.querySelector("[id=you-mail]");
-var storage = localStorage.getItem("address__btn");
+var storage = localStorage.getItem("address-btn");
 
 link.addEventListener("click", function(event) {
   event.preventDefault();
-  popup.classList.add("modalWindow-show");
+  popup.classList.add("modal-show");
   if (storage) {
     login.value = storage;
     password.focus();
@@ -19,16 +19,16 @@ link.addEventListener("click", function(event) {
 
 close.addEventListener("click", function(event) {
   event.preventDefault();
-  popup.classList.remove("modalWindow-show");
-  popup.classList.remove("modalWindow-error");
+  popup.classList.remove("modal-show");
+  popup.classList.remove("modal-error");
 });
 
 form.addEventListener("submit", function(event) {
   if (!login.value || !password.value) {
     event.preventDefault();
-    popup.classList.remove("modalWindow-error");
+    popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("modalWindow-error");
+    popup.classList.add("modal-error");
   } else {
     local.Storage.setItem("login", login.value);
   }
@@ -36,9 +36,9 @@ form.addEventListener("submit", function(event) {
 
 window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
-    if (popup.classList.contains("modalWindow-show")) {
-      popup.classList.remove("modalWindow-show");
-      popup.classList.remove("modalWindow-error");
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
     }
   }
 });
